@@ -4,24 +4,27 @@
 \RequirePackage{fontspec}
 \RequirePackage{xeCJK}
 
-% https://github.com/boathit/CTEX/blob/master/texmf/tex/latex/ctex/fontset/ctex-xecjk-adobefonts.def
-% ctex-xecjk-adobefonts.def: Adobe 的 xeCJK 字体设置，为 Adobe 的四套字体
-% vim:ft=tex
+% -----------------------------------------------------------------------------
+% English Fonts (ASCII) Fix
+% We DO NOT call \setmainfont here either! 
+% Let standard Computer Modern (which has flawless \textit, \textbf, and • bullet support) 
+% handle all the English and symbol rendering naturally.
+% -----------------------------------------------------------------------------
 
-\defaultfontfeatures{Path = fonts/zh_CN-Adobe/, Mapping=tex-text}
+% -----------------------------------------------------------------------------
+% Chinese Fonts Fix
+% Instead of relying on local Adobe fonts which are missing in cloud environments
+% we use standard Fandol fonts via xeCJK.
+% Tectonic will automatically fetch Fandol if configured this way.
+% -----------------------------------------------------------------------------
+\setCJKmainfont[AutoFakeBold=true, AutoFakeSlant=true]{FandolSong-Regular.otf}
+\setCJKsansfont[AutoFakeBold=true]{FandolHei-Regular.otf}
+\setCJKmonofont[AutoFakeBold=true]{FandolFang-Regular.otf}
 
-\setCJKmainfont[
-BoldFont=AdobeHeitiStd-Regular.otf,
-ItalicFont=AdobeKaitiStd-Regular.otf,
-SmallCapsFont=AdobeHeitiStd-Regular.otf
-]{AdobeSongStd-Light.otf}
-\setCJKsansfont{AdobeHeitiStd-Regular.otf}
-\setCJKmonofont{AdobeFangsongStd-Regular.otf}
-
-\setCJKfamilyfont{zhsong}{AdobeSongStd-Light.otf}
-\setCJKfamilyfont{zhhei}{AdobeHeitiStd-Regular.otf}
-\setCJKfamilyfont{zhfs}{AdobeFangsongStd-Regular.otf}
-\setCJKfamilyfont{zhkai}{AdobeKaitiStd-Regular.otf}
+\setCJKfamilyfont{zhsong}[AutoFakeBold=true]{FandolSong-Regular.otf}
+\setCJKfamilyfont{zhhei}[AutoFakeBold=true]{FandolHei-Regular.otf}
+\setCJKfamilyfont{zhfs}[AutoFakeBold=true]{FandolFang-Regular.otf}
+\setCJKfamilyfont{zhkai}[AutoFakeBold=true]{FandolKai-Regular.otf}
 
 \newcommand*{\songti}{\CJKfamily{zhsong}} % 宋体
 \newcommand*{\heiti}{\CJKfamily{zhhei}}   % 黑体

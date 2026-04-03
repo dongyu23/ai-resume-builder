@@ -1,0 +1,37 @@
+\NeedsTeXFormat{LaTeX2e}[1994/06/01]
+\ProvidesPackage{zh_CN-Adobefonts_external}[2015/05/25 zh_CN-Adobefonts_external Package]
+
+\RequirePackage{fontspec}
+\RequirePackage{xeCJK}
+
+% -----------------------------------------------------------------------------
+% English Fonts (ASCII) Fix
+% The original resume.cls tries to load local custom fonts from `fonts/Main/` 
+% which don't exist in our environment. This causes all English characters (like a-z, /, etc.)
+% to fallback to nullfont. We override it here with standard LaTeX fonts.
+% -----------------------------------------------------------------------------
+\setmainfont{Latin Modern Roman}
+\setsansfont{Latin Modern Sans}
+\setmonofont{Latin Modern Mono}
+
+% -----------------------------------------------------------------------------
+% Chinese Fonts Fix
+% Instead of relying on local Adobe fonts which are missing in cloud environments
+% we use standard Fandol fonts via xeCJK.
+% Tectonic will automatically fetch Fandol if configured this way.
+% -----------------------------------------------------------------------------
+\setCJKmainfont[AutoFakeBold=true, AutoFakeSlant=true]{FandolSong-Regular.otf}
+\setCJKsansfont[AutoFakeBold=true]{FandolHei-Regular.otf}
+\setCJKmonofont[AutoFakeBold=true]{FandolFang-Regular.otf}
+
+\setCJKfamilyfont{zhsong}[AutoFakeBold=true]{FandolSong-Regular.otf}
+\setCJKfamilyfont{zhhei}[AutoFakeBold=true]{FandolHei-Regular.otf}
+\setCJKfamilyfont{zhfs}[AutoFakeBold=true]{FandolFang-Regular.otf}
+\setCJKfamilyfont{zhkai}[AutoFakeBold=true]{FandolKai-Regular.otf}
+
+\newcommand*{\songti}{\CJKfamily{zhsong}} % 宋体
+\newcommand*{\heiti}{\CJKfamily{zhhei}}   % 黑体
+\newcommand*{\kaishu}{\CJKfamily{zhkai}}  % 楷书
+\newcommand*{\fangsong}{\CJKfamily{zhfs}} % 仿宋
+
+\endinput

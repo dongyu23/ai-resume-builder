@@ -129,7 +129,15 @@ async def get_pdf(project_id: str, compile_id: str):
     pdf_path = get_pdf_path(sandbox_dir, compile_id)
     if not pdf_path or not os.path.exists(pdf_path):
         raise HTTPException(status_code=404, detail="PDF not found or compilation failed")
-    return FileResponse(pdf_path, media_type="application/pdf", filename="resume.pdf")
+    
+    # By default FileResponse with a filename triggers a "Content-Disposition: attachment" 
+    # causing the browser to download the file instead of rendering it inline in an iframe.
+    # We use headers to force inline display, behaving like Overleaf's preview.
+    return FileResponse(
+        pdf_path, 
+        media_type="application/pdf", 
+        headers={"Content-Disposition": "inline; filename=resume.pdf"}
+    )
 
 @router.get("/{project_id}/{compile_id}/logs")
 async def stream_logs(project_id: str, compile_id: str):

@@ -8,7 +8,11 @@ export default defineConfig({
   server: {
     port: 3000,
     proxy: {
-      '/api': 'http://127.0.0.1:8000'
+      '/api': {
+        target: 'http://127.0.0.1:8000',
+        timeout: 180000, // 3 minutes timeout for long-running AI requests
+        proxyTimeout: 180000
+      }
     }
   }
 })

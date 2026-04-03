@@ -1,0 +1,35 @@
+% Hijiangtao Resume Template
+\documentclass{resume}
+\usepackage{zh_CN-Adobefonts_external}
+\usepackage{linespacing_fix}
+\usepackage{cite}
+
+\begin{document}
+\pagenumbering{gobble}
+\name{张三}
+
+\basicInfo{
+  \email{zhangsan@example.com} \textperiodcentered\ 
+  \phone{(+86) 138-0000-0000} \textperiodcentered\ 
+  \linkedin[zhangsan]{https://www.linkedin.com/in/zhangsan}
+}
+
+\section{\faGraduationCap\ 教育背景}
+\datedsubsection{\textbf{某某大学}, 某某学院}{2020 -- 至今}
+\textit{硕士研究生}\ 计算机科学与技术, 预计 2023 年 6 月毕业
+
+\section{\faUsers\ 工作经历}
+\datedsubsection{\textbf{某某科技公司} 北京}{2021年7月 -- 2021年10月}
+\role{实习生}{后端开发}
+\begin{itemize}
+  \item 负责后端微服务架构的设计与实现
+  \item 使用 Python/Go 优化了核心业务的响应速度
+\end{itemize}
+
+\section{\faCogs\ 技能特长}
+\begin{itemize}[parsep=0.5ex]
+  \item 编程语言: Python, Go, JavaScript, C++
+  \item 框架体系: FastAPI, React, Vue, Docker, Kubernetes
+\end{itemize}
+
+\end{document}

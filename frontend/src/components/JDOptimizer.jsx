@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { X, Sparkles, AlertCircle, ArrowRight, Check, Target } from 'lucide-react';
 
-export default function JDOptimizer({ onClose, files, setFiles, onCompile }) {
+export default function JDOptimizer({ onClose, files, setFiles, setActiveFile, onCompile }) {
   const [jdText, setJdText] = useState('');
   const [isOptimizing, setIsOptimizing] = useState(false);
   const [result, setResult] = useState(null);
@@ -14,8 +14,10 @@ export default function JDOptimizer({ onClose, files, setFiles, onCompile }) {
     try {
       const res = await axios.post('/api/ai/optimize', {
         job_description: jdText,
-        files: files.filter(f => !f.is_base64),
-        model: 'Qwen3-Coder'
+        files: files.filter(f => !f.is_base64).map(f => ({ path: f.path, content: f.content })),
+        model: 'DeepSeek-V3.2'
+      }, {
+        timeout: 180000 // 3 minutes timeout to match the proxy/backend for DeepSeek
       });
       setResult(res.data);
     } catch (err) {
@@ -27,11 +29,23 @@ export default function JDOptimizer({ onClose, files, setFiles, onCompile }) {
 
   const handleApply = () => {
     if (result && result.optimizedFiles) {
-      setFiles(prev => prev.map(f => {
-        const opt = result.optimizedFiles.find(optF => optF.path === f.path);
-        return opt ? { ...f, content: opt.content } : f;
-      }));
-      onCompile();
+      // Find the main tex file that was optimized
+      const optMain = result.optimizedFiles.find(f => f.path.endsWith('.tex') && (f.path.includes('main') || f.path.includes('resume')));
+      
+      if (optMain) {
+        // Create a new tailored filename
+        const newFilename = `main_tailored_${Math.floor(Date.now() / 1000)}.tex`;
+        
+        // Build the new files array, appending the new tailored file
+        // We do not overwrite the original files
+        const newFiles = [...files, { ...optMain, path: newFilename }];
+        
+        setFiles(newFiles);
+        if (setActiveFile) setActiveFile(newFilename);
+        
+        // Trigger compile with the new files array and target the new filename
+        onCompile(newFiles, newFilename);
+      }
       onClose();
     }
   };

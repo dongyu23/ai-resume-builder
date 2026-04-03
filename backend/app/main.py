@@ -14,6 +14,8 @@ app.add_middleware(
 
 app.include_router(compile.router, prefix="/api/compile", tags=["compile"])
 app.include_router(ai.router, prefix="/api/ai", tags=["ai"])
+from .routers import templates
+app.include_router(templates.router, prefix="/api/templates", tags=["templates"])
 
 @app.get("/api/health")
 def health_check():

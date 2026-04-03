@@ -1,18 +1,24 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 export default function PDFViewer({ url }) {
+  // We use a unique key to force iframe remount on URL change to avoid caching issues
+  const [key, setKey] = useState(Date.now());
+
+  useEffect(() => {
+    setKey(Date.now());
+  }, [url]);
+
   return (
-    <div className="w-full h-full flex items-center justify-center relative">
-      {/* Decorative corners */}
-      <div className="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-[var(--color-border-strong)] pointer-events-none"></div>
-      <div className="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-[var(--color-border-strong)] pointer-events-none"></div>
-      <div className="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-[var(--color-border-strong)] pointer-events-none"></div>
-      <div className="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-[var(--color-border-strong)] pointer-events-none"></div>
+    <div className="w-full h-full flex flex-col relative bg-[var(--color-bg-elevated)] shadow-2xl rounded-lg overflow-hidden border border-[var(--color-border-subtle)]">
+      {/* Top subtle bar for visual balance */}
+      <div className="h-1.5 w-full bg-gradient-to-r from-[var(--color-accent-primary)] to-[var(--color-accent-hover)] opacity-80 shrink-0"></div>
       
-      <div className="w-full h-full p-2 bg-[var(--color-bg-base)]/50 backdrop-blur-sm border border-[var(--color-border-subtle)] rounded-lg shadow-2xl">
+      {/* Clean Iframe container without padding or extra borders */}
+      <div className="flex-1 w-full bg-zinc-100">
         <iframe
-          src={`${url}#toolbar=0&navpanes=0&scrollbar=0`}
-          className="w-full h-full bg-white rounded transition-opacity duration-700 animate-slide-up"
+          key={key}
+          src={`${url}#view=FitH&toolbar=0&navpanes=0&scrollbar=0`}
+          className="w-full h-full bg-zinc-100 border-none outline-none animate-slide-up"
           title="PDF Preview"
         />
       </div>

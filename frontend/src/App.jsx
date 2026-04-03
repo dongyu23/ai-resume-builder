@@ -6,29 +6,20 @@ import Editor from './components/Editor';
 import PDFViewer from './components/PDFViewer';
 import JDOptimizer from './components/JDOptimizer';
 
-// 模板定义
-const TEMPLATES = {
-  'awesome-cv': [
-    { path: 'main.tex', content: '% Awesome-CV Template\n\\documentclass[11pt, a4paper]{awesome-cv}\n\\input{preamble/zh.tex}\n\n\\begin{document}\n\\makecvheader\n\\cvsection{个人总结}\n基于生产级设计的简历模板。\n\\end{document}', is_base64: false },
-    { path: 'preamble/zh.tex', content: '\\usepackage[UTF8]{ctex}\n\\punctstyle{kaiming}', is_base64: false },
-    { path: 'awesome-cv.cls', content: '% Mock Class File', is_base64: false }
-  ],
+// 初始占位模板，等待从后端加载真实模板
+const INITIAL_TEMPLATES = {
   'hijiangtao': [
-    { 
-      path: 'main.tex', 
-      content: '% Hijiangtao Resume Template\n\\documentclass{resume}\n\\usepackage{zh_CN-Adobefonts_external}\n\\usepackage{linespacing_fix}\n\\usepackage{cite}\n\n\\begin{document}\n\\pagenumbering{gobble}\n\\name{张三}\n\n\\basicInfo{\n  \\email{zhangsan@example.com} \\textperiodcentered\\ \n  \\phone{(+86) 138-0000-0000} \\textperiodcentered\\ \n  \\linkedin[zhangsan]{https://www.linkedin.com/in/zhangsan}\n}\n\n\\section{\\faGraduationCap\\ 教育背景}\n\\datedsubsection{\\textbf{某某大学}, 某某学院}{2020 -- 至今}\n\\textit{硕士研究生}\\ 计算机科学与技术, 预计 2023 年 6 月毕业\n\n\\section{\\faUsers\\ 工作经历}\n\\datedsubsection{\\textbf{某某科技公司} 北京}{2021年7月 -- 2021年10月}\n\\role{实习生}{后端开发}\n\\begin{itemize}\n  \\item 负责后端微服务架构的设计与实现\n  \\item 使用 Python/Go 优化了核心业务的响应速度\n\\end{itemize}\n\n\\section{\\faCogs\\ 技能特长}\n\\begin{itemize}[parsep=0.5ex]\n  \\item 编程语言: Python, Go, JavaScript, C++\n  \\item 框架体系: FastAPI, React, Vue, Docker, Kubernetes\n\\end{itemize}\n\n\\end{document}', 
-      is_base64: false 
-    },
-    { path: 'resume.cls', content: '% Mock Class File', is_base64: false },
-    { path: 'fontawesome.sty', content: '% Mock Sty File', is_base64: false },
-    { path: 'zh_CN-Adobefonts_external.sty', content: '% Mock Sty File', is_base64: false },
-    { path: 'linespacing_fix.sty', content: '% Mock Sty File', is_base64: false }
+    { path: 'main.tex', content: '% Loading template from server...', is_base64: false }
+  ],
+  'awesome-cv': [
+    { path: 'main.tex', content: '% Loading template from server...', is_base64: false }
   ]
 };
 
 function App() {
+  const [templates, setTemplates] = useState(INITIAL_TEMPLATES);
   const [currentTemplate, setCurrentTemplate] = useState('hijiangtao');
-  const [files, setFiles] = useState(TEMPLATES['hijiangtao']);
+  const [files, setFiles] = useState(INITIAL_TEMPLATES['hijiangtao']);
   const [activeFile, setActiveFile] = useState('main.tex');
   const [projectId] = useState('test-project-1');
   const [compileId, setCompileId] = useState(null);
@@ -41,9 +32,24 @@ function App() {
   // Create a ref for the terminal container to auto-scroll
   const terminalRef = useRef(null);
 
+  // 加载后端真实模板
+  useEffect(() => {
+    async function loadTemplates() {
+      try {
+        const res = await axios.get('/api/templates/');
+        setTemplates(res.data);
+        setFiles(res.data['hijiangtao']);
+        setLogs('> [SYSTEM] Successfully loaded authentic LaTeX templates from server.\n');
+      } catch (err) {
+        setLogs(`> [ERROR] Failed to load templates: ${err.message}\n`);
+      }
+    }
+    loadTemplates();
+  }, []);
+
   const handleTemplateChange = (templateName) => {
     setCurrentTemplate(templateName);
-    setFiles(TEMPLATES[templateName]);
+    setFiles(templates[templateName]);
     setActiveFile('main.tex');
     setLogs(`> [SYSTEM] Switched to template: ${templateName}\n`);
     setCompileId(null);
@@ -58,14 +64,20 @@ function App() {
     }, 1200);
   };
 
-  const handleCompile = async (currentFiles = files) => {
+  const handleCompile = async (currentFiles = files, targetMainTex = activeFile) => {
     setIsCompiling(true);
     setLogs('> [SYSTEM] Initiating build sequence...\n');
+
+    let compileTarget = 'main.tex';
+    if (targetMainTex && targetMainTex.endsWith('.tex') && targetMainTex.includes('main')) {
+      compileTarget = targetMainTex;
+    }
+
     try {
       const res = await axios.post('/api/compile/', {
         project_id: projectId,
         files: currentFiles,
-        main_tex: 'main.tex',
+        main_tex: compileTarget,
         compiler: 'xelatex'
       });
       setCompileId(res.data.compile_id);
@@ -175,6 +187,18 @@ function App() {
               <Sparkles className="w-3.5 h-3.5 text-[var(--color-accent-primary)]" />
               Optimize JD
             </button>
+
+            {compileId && !isCompiling && (
+              <a 
+                href={`/api/compile/${projectId}/${compileId}/pdf`}
+                download="resume.pdf"
+                className="flex items-center gap-2 px-3 py-1.5 bg-[var(--color-bg-hover)] border border-[var(--color-border-subtle)] text-[var(--color-text-primary)] rounded-md hover:border-[var(--color-accent-primary)] transition-all text-[13px] font-medium"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+                Download PDF
+              </a>
+            )}
+
             <button 
               onClick={() => handleCompile()} 
               disabled={isCompiling} 
@@ -207,7 +231,7 @@ function App() {
             <div className="absolute inset-0 bg-dots opacity-[0.15] pointer-events-none"></div>
             
             {/* PDF View */}
-            <div className="flex-1 relative flex items-center justify-center p-8 overflow-hidden z-10">
+            <div className="flex-1 relative flex items-center justify-center p-0 overflow-hidden z-10">
               {compileId && !isCompiling ? (
                 <div className="w-full h-full relative group">
                   <PDFViewer url={`/api/compile/${projectId}/${compileId}/pdf`} />
@@ -256,6 +280,7 @@ function App() {
           onClose={() => setShowJDOptimizer(false)} 
           files={files}
           setFiles={setFiles}
+          setActiveFile={setActiveFile}
           onCompile={handleCompile}
         />
       )}

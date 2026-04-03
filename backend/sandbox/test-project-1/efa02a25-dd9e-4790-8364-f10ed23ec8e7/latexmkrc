@@ -1,0 +1,9 @@
+$pdf_mode = 5; # 1 for pdflatex, 5 for xelatex, 4 for lualatex
+$interaction = 'nonstopmode';
+$max_repeat = 5;
+$bibtex_use = 2;
+
+# For minted or other packages needing shell escape
+# $pdflatex = 'pdflatex -shell-escape %O %S';
+$xelatex = 'xelatex -shell-escape -halt-on-error %O %S';
+$lualatex = 'lualatex -shell-escape -halt-on-error %O %S';
