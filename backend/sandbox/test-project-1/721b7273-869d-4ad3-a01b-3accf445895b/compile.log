@@ -1,0 +1,431 @@
+> [SYSTEM] Initializing multi-strategy compilation for main.tex
+> [SYSTEM] Strategy A: System TeXLive (latexmk) not found in PATH. Skipping...
+
+> [SYSTEM] Strategy B: Tectonic Engine (Self-contained, auto-downloading packages).
+> [SYSTEM] Tectonic engine is ready. Starting compilation...
+
+> [Strategy B] Executing: /workspace/bin/tectonic -Z shell-escape -Z continue-on-errors main.tex
+note: Running TeX ...
+error: awesome-cv.cls:80: ! LaTeX Error: File `fontawesome6.sty' not found.
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: LaTeX Error: The package . failed to load.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+warning: accessing absolute path `/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf`; build may not be reproducible in other environments
+warning: accessing absolute path `/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf`; build may not be reproducible in other environments
+warning: accessing absolute path `/usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf`; build may not be reproducible in other environments
+warning: accessing absolute path `/usr/share/fonts/truetype/dejavu/DejaVuSansMono-Oblique.ttf`; build may not be reproducible in other environments
+warning: accessing absolute path `/usr/share/fonts/truetype/dejavu/DejaVuSerif-Bold.ttf`; build may not be reproducible in other environments
+warning: accessing absolute path `/usr/share/fonts/truetype/dejavu/DejaVuSansMono-Bold.ttf`; build may not be reproducible in other environments
+warning: accessing absolute path `/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf`; build may not be reproducible in other environments
+warning: accessing absolute path `/usr/share/fonts/truetype/dejavu/DejaVuSansMono-BoldOblique.ttf`; build may not be reproducible in other environments
+error: awesome-cv.cls:91: Package fontspec Error: The font "Source Sans 3" cannot be found.
+
+For immediate help type H <return>
+error: awesome-cv.cls:91: Package fontspec Error: The font "Source Sans 3 Light" cannot be found.
+
+For immediate help type H <return>
+error: awesome-cv.cls:91: Package fontspec Error: The font "Source Sans 3 Light" cannot be found.
+
+For immediate help type H <return>
+error: awesome-cv.cls:91: Package fontspec Error: The font "Source Sans 3 Light Italic" cannot be
+(fontspec)                found.
+
+For immediate help type H <return>
+error: awesome-cv.cls:91: Package fontspec Error: The font "Source Sans 3 Light Italic" cannot be
+(fontspec)                found.
+
+For immediate help type H <return>
+error: awesome-cv.cls:91: Package fontspec Error: The font "Source Sans 3" cannot be found.
+
+For immediate help type H <return>
+error: awesome-cv.cls:91: Package fontspec Error: The font "Source Sans 3" cannot be found.
+
+For immediate help type H <return>
+error: awesome-cv.cls:91: Package fontspec Error: The font "Source Sans 3 Bold" cannot be found.
+
+For immediate help type H <return>
+error: awesome-cv.cls:91: Package fontspec Error: The font "Source Sans 3 Bold" cannot be found.
+
+For immediate help type H <return>
+error: awesome-cv.cls:91: Package fontspec Error: The font "Source Sans 3 Italic" cannot be found.
+
+For immediate help type H <return>
+error: awesome-cv.cls:91: Package fontspec Error: The font "Source Sans 3 Italic" cannot be found.
+
+For immediate help type H <return>
+error: awesome-cv.cls:91: Package fontspec Error: The font "Source Sans 3 Bold Italic" cannot be
+(fontspec)                found.
+
+For immediate help type H <return>
+error: awesome-cv.cls:91: Package fontspec Error: The font "Source Sans 3 Bold Italic" cannot be
+(fontspec)                found.
+
+For immediate help type H <return>
+error: awesome-cv.cls:91: Package fontspec Error: The font "Source Sans 3" cannot be found.
+
+For immediate help type H <return>
+error: awesome-cv.cls:91: Package fontspec Error: The font "Source Sans 3 Light" cannot be found.
+
+For immediate help type H <return>
+error: awesome-cv.cls:91: Package fontspec Error: The font "Source Sans 3 Light" cannot be found.
+
+For immediate help type H <return>
+error: awesome-cv.cls:91: Package fontspec Error: The font "Source Sans 3 Light Italic" cannot be
+(fontspec)                found.
+
+For immediate help type H <return>
+error: awesome-cv.cls:91: Package fontspec Error: The font "Source Sans 3 Light Italic" cannot be
+(fontspec)                found.
+
+For immediate help type H <return>
+error: awesome-cv.cls:91: Package fontspec Error: The font "Source Sans 3" cannot be found.
+
+For immediate help type H <return>
+error: awesome-cv.cls:91: Package fontspec Error: The font "Source Sans 3" cannot be found.
+
+For immediate help type H <return>
+error: awesome-cv.cls:91: Package fontspec Error: The font "Source Sans 3 Bold" cannot be found.
+
+For immediate help type H <return>
+error: awesome-cv.cls:91: Package fontspec Error: The font "Source Sans 3 Bold" cannot be found.
+
+For immediate help type H <return>
+error: awesome-cv.cls:91: Package fontspec Error: The font "Source Sans 3 Italic" cannot be found.
+
+For immediate help type H <return>
+error: awesome-cv.cls:91: Package fontspec Error: The font "Source Sans 3 Italic" cannot be found.
+
+For immediate help type H <return>
+error: awesome-cv.cls:91: Package fontspec Error: The font "Source Sans 3 Bold Italic" cannot be
+(fontspec)                found.
+
+For immediate help type H <return>
+error: awesome-cv.cls:91: Package fontspec Error: The font "Source Sans 3 Bold Italic" cannot be
+(fontspec)                found.
+
+For immediate help type H <return>
+error: awesome-cv.cls:91: Font TU/SourceSans3(0)/m/n/10.95="Source Sans 3" at 10.95pt not loadable: Metric (TFM) file or installed font not found
+error: awesome-cv.cls:99: Package fontspec Error: The font "Source Sans 3" cannot be found.
+
+For immediate help type H <return>
+error: awesome-cv.cls:99: Package fontspec Error: The font "Source Sans 3" cannot be found.
+
+For immediate help type H <return>
+error: awesome-cv.cls:107: Package fontspec Error: The font "Roboto" cannot be found.
+
+For immediate help type H <return>
+error: awesome-cv.cls:107: Package fontspec Error: The font "Roboto Light" cannot be found.
+
+For immediate help type H <return>
+error: awesome-cv.cls:107: Package fontspec Error: The font "Roboto Light" cannot be found.
+
+For immediate help type H <return>
+error: awesome-cv.cls:107: Package fontspec Error: The font "Roboto Light Italic" cannot be found.
+
+For immediate help type H <return>
+error: awesome-cv.cls:107: Package fontspec Error: The font "Roboto Light Italic" cannot be found.
+
+For immediate help type H <return>
+error: awesome-cv.cls:107: Package fontspec Error: The font "Roboto" cannot be found.
+
+For immediate help type H <return>
+error: awesome-cv.cls:107: Package fontspec Error: The font "Roboto" cannot be found.
+
+For immediate help type H <return>
+error: awesome-cv.cls:107: Package fontspec Error: The font "Roboto Bold" cannot be found.
+
+For immediate help type H <return>
+error: awesome-cv.cls:107: Package fontspec Error: The font "Roboto Bold" cannot be found.
+
+For immediate help type H <return>
+error: awesome-cv.cls:107: Package fontspec Error: The font "Roboto Italic" cannot be found.
+
+For immediate help type H <return>
+error: awesome-cv.cls:107: Package fontspec Error: The font "Roboto Italic" cannot be found.
+
+For immediate help type H <return>
+error: awesome-cv.cls:107: Package fontspec Error: The font "Roboto Bold Italic" cannot be found.
+
+For immediate help type H <return>
+error: awesome-cv.cls:107: Package fontspec Error: The font "Roboto Bold Italic" cannot be found.
+
+For immediate help type H <return>
+error: ctex.sty:706: Font TU/SourceSans3(0)/m/n/9="Source Sans 3" at 9.0pt not loadable: Metric (TFM) file or installed font not found
+warning: open of input /System/Library/Fonts/Menlo.ttc failed
+caused by: access to the path `/System/Library/Fonts/Menlo.ttc` is forbidden
+error: main.tex:7: Font TU/Roboto(0)/m/n/32=Roboto at 32.0pt not loadable: Metric (TFM) file or installed font not found
+error: main.tex:7: Font TU/Roboto(0)/l/n/32="Roboto Light" at 32.0pt not loadable: Metric (TFM) file or installed font not found
+error: main.tex:7: Undefined control sequence
+error: main.tex:7: Font TU/Roboto(0)/b/n/32="Roboto Bold" at 32.0pt not loadable: Metric (TFM) file or installed font not found
+error: main.tex:7: Undefined control sequence
+error: main.tex:7: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help
+error: main.tex:7: Font TU/Roboto(0)/m/n/6.8=Roboto at 6.8pt not loadable: Metric (TFM) file or installed font not found
+error: main.tex:7: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help
+error: main.tex:7: Font TU/SourceSans3(0)/m/n/16="Source Sans 3" at 16.0pt not loadable: Metric (TFM) file or installed font not found
+error: main.tex:7: Font TU/SourceSans3(0)/b/n/16="Source Sans 3 Bold" at 16.0pt not loadable: Metric (TFM) file or installed font not found
+note: Rerunning TeX because "main.aux" changed ...
+error: awesome-cv.cls:80: ! LaTeX Error: File `fontawesome6.sty' not found.
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: LaTeX Error: The package . failed to load.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:80: Undefined control sequence
+error: awesome-cv.cls:91: Package fontspec Error: The font "Source Sans 3" cannot be found.
+
+For immediate help type H <return>
+error: awesome-cv.cls:91: Package fontspec Error: The font "Source Sans 3 Light" cannot be found.
+
+For immediate help type H <return>
+error: awesome-cv.cls:91: Package fontspec Error: The font "Source Sans 3 Light" cannot be found.
+
+For immediate help type H <return>
+error: awesome-cv.cls:91: Package fontspec Error: The font "Source Sans 3 Light Italic" cannot be
+(fontspec)                found.
+
+For immediate help type H <return>
+error: awesome-cv.cls:91: Package fontspec Error: The font "Source Sans 3 Light Italic" cannot be
+(fontspec)                found.
+
+For immediate help type H <return>
+error: awesome-cv.cls:91: Package fontspec Error: The font "Source Sans 3" cannot be found.
+
+For immediate help type H <return>
+error: awesome-cv.cls:91: Package fontspec Error: The font "Source Sans 3" cannot be found.
+
+For immediate help type H <return>
+error: awesome-cv.cls:91: Package fontspec Error: The font "Source Sans 3 Bold" cannot be found.
+
+For immediate help type H <return>
+error: awesome-cv.cls:91: Package fontspec Error: The font "Source Sans 3 Bold" cannot be found.
+
+For immediate help type H <return>
+error: awesome-cv.cls:91: Package fontspec Error: The font "Source Sans 3 Italic" cannot be found.
+
+For immediate help type H <return>
+error: awesome-cv.cls:91: Package fontspec Error: The font "Source Sans 3 Italic" cannot be found.
+
+For immediate help type H <return>
+error: awesome-cv.cls:91: Package fontspec Error: The font "Source Sans 3 Bold Italic" cannot be
+(fontspec)                found.
+
+For immediate help type H <return>
+error: awesome-cv.cls:91: Package fontspec Error: The font "Source Sans 3 Bold Italic" cannot be
+(fontspec)                found.
+
+For immediate help type H <return>
+error: awesome-cv.cls:91: Package fontspec Error: The font "Source Sans 3" cannot be found.
+
+For immediate help type H <return>
+error: awesome-cv.cls:91: Package fontspec Error: The font "Source Sans 3 Light" cannot be found.
+
+For immediate help type H <return>
+error: awesome-cv.cls:91: Package fontspec Error: The font "Source Sans 3 Light" cannot be found.
+
+For immediate help type H <return>
+error: awesome-cv.cls:91: Package fontspec Error: The font "Source Sans 3 Light Italic" cannot be
+(fontspec)                found.
+
+For immediate help type H <return>
+error: awesome-cv.cls:91: Package fontspec Error: The font "Source Sans 3 Light Italic" cannot be
+(fontspec)                found.
+
+For immediate help type H <return>
+error: awesome-cv.cls:91: Package fontspec Error: The font "Source Sans 3" cannot be found.
+
+For immediate help type H <return>
+error: awesome-cv.cls:91: Package fontspec Error: The font "Source Sans 3" cannot be found.
+
+For immediate help type H <return>
+error: awesome-cv.cls:91: Package fontspec Error: The font "Source Sans 3 Bold" cannot be found.
+
+For immediate help type H <return>
+error: awesome-cv.cls:91: Package fontspec Error: The font "Source Sans 3 Bold" cannot be found.
+
+For immediate help type H <return>
+error: awesome-cv.cls:91: Package fontspec Error: The font "Source Sans 3 Italic" cannot be found.
+
+For immediate help type H <return>
+error: awesome-cv.cls:91: Package fontspec Error: The font "Source Sans 3 Italic" cannot be found.
+
+For immediate help type H <return>
+error: awesome-cv.cls:91: Package fontspec Error: The font "Source Sans 3 Bold Italic" cannot be
+(fontspec)                found.
+
+For immediate help type H <return>
+error: awesome-cv.cls:91: Package fontspec Error: The font "Source Sans 3 Bold Italic" cannot be
+(fontspec)                found.
+
+For immediate help type H <return>
+error: awesome-cv.cls:91: Font TU/SourceSans3(0)/m/n/10.95="Source Sans 3" at 10.95pt not loadable: Metric (TFM) file or installed font not found
+error: awesome-cv.cls:99: Package fontspec Error: The font "Source Sans 3" cannot be found.
+
+For immediate help type H <return>
+error: awesome-cv.cls:99: Package fontspec Error: The font "Source Sans 3" cannot be found.
+
+For immediate help type H <return>
+error: awesome-cv.cls:107: Package fontspec Error: The font "Roboto" cannot be found.
+
+For immediate help type H <return>
+error: awesome-cv.cls:107: Package fontspec Error: The font "Roboto Light" cannot be found.
+
+For immediate help type H <return>
+error: awesome-cv.cls:107: Package fontspec Error: The font "Roboto Light" cannot be found.
+
+For immediate help type H <return>
+error: awesome-cv.cls:107: Package fontspec Error: The font "Roboto Light Italic" cannot be found.
+
+For immediate help type H <return>
+error: awesome-cv.cls:107: Package fontspec Error: The font "Roboto Light Italic" cannot be found.
+
+For immediate help type H <return>
+error: awesome-cv.cls:107: Package fontspec Error: The font "Roboto" cannot be found.
+
+For immediate help type H <return>
+error: awesome-cv.cls:107: Package fontspec Error: The font "Roboto" cannot be found.
+
+For immediate help type H <return>
+error: awesome-cv.cls:107: Package fontspec Error: The font "Roboto Bold" cannot be found.
+
+For immediate help type H <return>
+error: awesome-cv.cls:107: Package fontspec Error: The font "Roboto Bold" cannot be found.
+
+For immediate help type H <return>
+error: awesome-cv.cls:107: Package fontspec Error: The font "Roboto Italic" cannot be found.
+
+For immediate help type H <return>
+error: awesome-cv.cls:107: Package fontspec Error: The font "Roboto Italic" cannot be found.
+
+For immediate help type H <return>
+error: awesome-cv.cls:107: Package fontspec Error: The font "Roboto Bold Italic" cannot be found.
+
+For immediate help type H <return>
+error: awesome-cv.cls:107: Package fontspec Error: The font "Roboto Bold Italic" cannot be found.
+
+For immediate help type H <return>
+error: ctex.sty:706: Font TU/SourceSans3(0)/m/n/9="Source Sans 3" at 9.0pt not loadable: Metric (TFM) file or installed font not found
+warning: open of input /System/Library/Fonts/Menlo.ttc failed
+caused by: access to the path `/System/Library/Fonts/Menlo.ttc` is forbidden
+error: main.tex:7: Font TU/Roboto(0)/m/n/32=Roboto at 32.0pt not loadable: Metric (TFM) file or installed font not found
+error: main.tex:7: Font TU/Roboto(0)/l/n/32="Roboto Light" at 32.0pt not loadable: Metric (TFM) file or installed font not found
+error: main.tex:7: Undefined control sequence
+error: main.tex:7: Font TU/Roboto(0)/b/n/32="Roboto Bold" at 32.0pt not loadable: Metric (TFM) file or installed font not found
+error: main.tex:7: Undefined control sequence
+error: main.tex:7: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help
+error: main.tex:7: Font TU/Roboto(0)/m/n/6.8=Roboto at 6.8pt not loadable: Metric (TFM) file or installed font not found
+error: main.tex:7: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help
+error: main.tex:7: Font TU/SourceSans3(0)/m/n/16="Source Sans 3" at 16.0pt not loadable: Metric (TFM) file or installed font not found
+error: main.tex:7: Font TU/SourceSans3(0)/b/n/16="Source Sans 3 Bold" at 16.0pt not loadable: Metric (TFM) file or installed font not found
+warning: errors were issued by the TeX engine, but were ignored; use --print and/or --keep-logs for details.
+note: Running xdvipdfmx ...
+note: Writing `main.pdf` (8.05 KiB)
+note: Skipped writing 1 intermediate files (use --keep-intermediates to keep them)
+
+> [SYSTEM] Compilation finished successfully.

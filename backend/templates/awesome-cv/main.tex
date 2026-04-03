@@ -1,0 +1,43 @@
+\documentclass[11pt, a4paper]{awesome-cv}
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+\input{preamble/zh.tex}
+
+\name{张三}{}
+\position{高级软件工程师}
+\address{中国北京市朝阳区}
+\mobile{(+86) 138-0000-0000}
+\email{zhangsan@example.com}
+\github{zhangsan}
+\linkedin{zhangsan}
+
+\begin{document}
+\makecvheader
+
+\makecvfooter
+  {\today}
+  {张三~~~·~~~简历}
+  {\thepage}
+
+\cvsection{个人总结}
+\begin{cvparagraph}
+具有5年以上的软件开发经验，精通 Python、JavaScript 和 C++。对微服务架构、云计算及人工智能应用有深入的理解和实践经验。主导过多项关键业务系统的重构与性能优化，带领团队完成多个核心级项目上线。
+\end{cvparagraph}
+
+\cvsection{工作经历}
+\begin{cventries}
+  \cventry
+    {资深开发工程师} % 职位
+    {某知名互联网公司} % 公司
+    {北京, 中国} % 位置
+    {2020.07 - 至今} % 时间
+    {
+      \begin{cvitems}
+        \item {主导核心交易系统的微服务化重构，使系统吞吐量提升了200\%，响应延迟降低了50\%。}
+        \item {设计并实现了一套基于大模型的智能简历分析平台，服务超过10万用户。}
+        \item {优化数据库查询与索引，使慢查询率降低至0.1\%以下。}
+      \end{cvitems}
+    }
+\end{cventries}
+
+\end{document}

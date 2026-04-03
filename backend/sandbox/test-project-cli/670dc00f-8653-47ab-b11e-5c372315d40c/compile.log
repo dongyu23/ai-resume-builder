@@ -1,0 +1,23 @@
+> [SYSTEM] Initializing multi-strategy compilation for main.tex
+> [SYSTEM] Strategy A: System TeXLive (latexmk) not found in PATH. Skipping...
+
+> [SYSTEM] Strategy B: Tectonic Engine (Self-contained, auto-downloading packages).
+> [SYSTEM] Downloading Tectonic to /workspace/bin/tectonic (This only happens once)...
+tectonic(drop-installer.sh): downloading version 0.15.0 for architecture x86_64-unknown-linux-gnu
+
+tectonic(drop-installer.sh): woohoo, the `tectonic` program has been unpacked into the current directory!
+tectonic(drop-installer.sh): consider moving it to a directory in $PATH so that it can be run from anywhere
+> [SYSTEM] Tectonic engine is ready. Starting compilation...
+
+> [Strategy B] Executing: /workspace/bin/tectonic -Z shell-escape -Z continue-on-errors main.tex
+note: Running TeX ...
+warning: open of input /System/Library/Fonts/Menlo.ttc failed
+caused by: access to the path `/System/Library/Fonts/Menlo.ttc` is forbidden
+note: Rerunning TeX because "main.aux" changed ...
+warning: open of input /System/Library/Fonts/Menlo.ttc failed
+caused by: access to the path `/System/Library/Fonts/Menlo.ttc` is forbidden
+note: Running xdvipdfmx ...
+note: Writing `main.pdf` (3.80 KiB)
+note: Skipped writing 1 intermediate files (use --keep-intermediates to keep them)
+
+> [SYSTEM] Compilation finished successfully.
